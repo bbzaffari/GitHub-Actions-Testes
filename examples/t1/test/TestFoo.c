@@ -8,7 +8,7 @@ TEST_TEAR_DOWN(Foo) {}
 
 // === Casos válidos (Classes de equivalência e limites) ===
 TEST(Foo, RegularDay) {
-    TEST_ASSERT_EQUAL_STRING("11/05/2021", foo(5,10,2021));
+    TEST_ASSERT_EQUAL_STRING("11/05/2021", foo(29,03,2021));
 }
 
 TEST(Foo, EndOf30DayMonth) {

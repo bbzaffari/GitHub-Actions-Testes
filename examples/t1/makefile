@@ -54,6 +54,7 @@ SRC_FILES1=\
 INC_DIRS=-Isrc -I$(UNITY_ROOT)/src -I$(UNITY_ROOT)/extras/fixture/src
 SYMBOLS=
 
+
 all: clean compile run
 
 compile:
@@ -64,6 +65,12 @@ run:
 
 static:
 	cppcheck --enable=all --suppress=missingIncludeSystem src/foo.c
+
+# valgrind: all
+# 	valgrind --leak-check=full \
+# 	          --show-leak-kinds=all \
+# 	          --error-exitcode=1 \
+# 	          ./all_tests.out
 
 clean:
 	$(CLEANUP) $(TARGET1)
