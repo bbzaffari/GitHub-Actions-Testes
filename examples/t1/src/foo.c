@@ -1,9 +1,9 @@
 #include "foo.h"
 #include <stdio.h>
 
-static char buffer[11];  // "DD/MM/YYYY" + '\0'
+static char buffer[12];  // "DD/MM/YYYY" + '\0'
 
-char* foo(int month, int day, int year) {
+const char* foo(int month, int day, int year) {
     if (year < 1900 || year > 2099) return "E03";        // NODO 01
     if (month < 1 || month > 12) return "E01";           // NODO 02
 

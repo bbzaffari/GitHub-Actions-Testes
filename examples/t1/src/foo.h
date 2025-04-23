@@ -13,6 +13,6 @@
  *   "E04": ultrapassou limite máximo de ano ao avançar
  *   buffer estático "DD/MM/YYYY" com data seguinte
  */
-char* foo(int month, int day, int year);
+const char* foo(int month, int day, int year);
 
 #endif // FOO_H

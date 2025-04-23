@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cppcheck valgrind
+
+      # --- AQUI: executamos comandos dentro de examples/t1 ---
+      - name: Build & Run Unity tests
+        working-directory: examples/t1
+        run: make all
+
+      - name: Static analysis (cppcheck)
+        working-directory: examples/t1
+        run: make static
+
+      - name: Memory leak check (Valgrind)
+        working-directory: examples/t1
+        run: valgrind --leak-check=full --error-exitcode=1 ./all_tests.out
+
+      - name: Clean workspace
+        working-directory: examples/t1
+        run: make clean
