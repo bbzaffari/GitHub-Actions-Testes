@@ -62,6 +62,10 @@ compile:
 run:
 	- ./$(TARGET1) -v
 
+static:
+	\tcppcheck --enable=all --suppress=missingIncludeSystem src/foo.c
+
+
 clean:
 	$(CLEANUP) $(TARGET1)
 
