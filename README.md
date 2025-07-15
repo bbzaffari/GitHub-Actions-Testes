@@ -1,3 +1,20 @@
+# NextDate Function – Software Testing Project
+
+This project was developed as part of the Software Reliability and Security class with Professor Iaçanã Weber.
+
+It implements the NextDate function (aliased as `foo`) in C, which receives a day, month, and year, and returns the next day's date or an error code if the input is invalid.
+
+The project includes white-box (control flow, decision nodes) and black-box (equivalence classes, boundary values) tests, covering leap years and limit cases. All tests were written using the Unity framework.
+
+The source code and tests can be found under the `exemplos/t1` directory.
+
+
+
+
+
+
+
+
 Unity Test API
 ==============
 
