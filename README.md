@@ -1,5 +1,7 @@
 # NextDate Function – Software Testing Project
 
+[![CI Status](https://github.com/bbzaffari/GitHub-Actions-Testes/actions/workflows/ci.yml/badge.svg)](https://github.com/bbzaffari/GitHub-Actions-Testes/actions)
+
 This project was developed as part of the Software Reliability and Security class with Professor Iaçanã Weber.
 
 It implements the NextDate function (aliased as `foo`) in C, which receives a day, month, and year, and returns the next day's date or an error code if the input is invalid.
